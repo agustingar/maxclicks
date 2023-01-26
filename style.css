@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background-image: url(https://i.gifer.com/xK.gif);
+  background-size: contain;
+}
+
+/* ================================================================= */
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.mainLogo {
+  margin: auto;
+  width: 30%;
+}
+
+#btn-reset {
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  margin: 0.02rem;
+  padding: 0.3rem;
+  border-radius: 50px;
+}
+
+#btn-home {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+  margin: 0.02rem;
+  padding: 0.3rem;
+  border-radius: 50px;
+}
+
+/* ================================================================= */
+/* Main */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/media/1j6F_morado.gif);
+  background-position: center;
+  background-size: auto;
+  background-repeat: round;
+  width: 90%;
+  border-radius: 20px;
+  margin: auto;
+  border: solid 11px #313062;
+  border-style: double;
+}
+
+/* Terminal windows (History) */
+
+.windows-desktop {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 20px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.terminal-screen {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto;
+  padding: 40px;
+}
+
+.terminal-content {
+  display: grid;
+  justify-content: flex-start;
+  border: 1px solid #000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0.02rem;
+  padding: 0.3rem;
+  height: 300px;
+  width: unset;
+}
+
+.terminal {
+  display: block;
+  width: 850px;
+  height: 120px;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 50px auto;
+  background: #0084ff59;
+  padding: 25px;
+  border-radius: 5px;
+  border: 3px;
+  border-style: solid;
+  border-color: #52aafe;
+
+}
+
+.start-btn {
+  width: 50%;
+  margin: auto;
+  box-shadow: inset 0px 1px 0px 0px #ff994e;
+  background: linear-gradient(to bottom, #fe8140 5%, #bd2204 100%);
+  background-color: #d0451b;
+  border-radius: 6px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  font-variant: all-petite-caps;
+  font-family: inherit;
+  padding: 10px 0px 13px 0px;
+}
+
+/* Registration windows (User info) */
+
+.registration-screen {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  width: auto;
+  height: 100%;
+  padding: 4rem;
+  margin: 40px;
+  box-sizing: border-box;
+  background-color: rgb(0 0 0);
+  background-image: radial-gradient(rgb(18 27 40 / 91%), rgb(2, 9, 3)),
+    url(https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif);
+  background-size: contain;
+  font-family: Inconsolata, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgb(255 255 255 / 80%);
+  text-shadow: rgb(51 206 255) 0px 0px 1ex, rgb(255 255 255 / 80%) 0px 0px 2px;
+  border-width: 2px;
+  border-style: inherit;
+  border-color: #47334f;
+  text-align: center;
+}
+
+#login-btn {
+  box-shadow: inset 0px 1px 0px 0px #ff994e;
+  background: linear-gradient(to bottom, #fe8140 5%, #bd2204 100%);
+  background-color: #d0451b;
+  border-radius: 6px;
+  border: 1px solid #942911;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  font-variant: all-petite-caps;
+  padding: 10px 0px 13px 0px;
+  width: 30%;
+  margin: 5px auto;
+  font-family: "Press Start 2P", cursive;
+}
+
+.row {
+  display: grid;
+}
+.col col__left label {
+  text-align: center;
+}
+#login {
+  flex-grow: 1;
+  color: #ffffff;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  background: black;
+  border-color: #fe9349;
+  border-width: 4px;
+  border-style: groove;
+  border-radius: 7px;
+  padding-left: 10px;
+  margin: 10px;
+  font-family: "Press Start 2P";
+  text-align: center;
+}
+
+/* Game window (playable area) */
+
+.game-area {
+  display: none;
+  position: relative;
+  width: auto;
+  height: 48vw;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 20px;
+
+}
+
+.timer {
+  position: absolute;
+  top: 43%;
+  right: 43%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 6vw;
+}
+
+#virus-image {
+  height: 15vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.5s;
+}
+
+#virus-image:hover {
+  cursor: pointer;
+}
+
+/* Win Window (if the player win) */
+
+.win-screen {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  width: auto;
+  padding: 4rem;
+  margin: 40px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: rgb(0 0 0);
+  background-image: radial-gradient(rgb(18 27 40 / 91%), rgb(2, 9, 3)),
+    url(https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif);
+  background-size: contain;
+  font-family: Inconsolata, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgb(255 255 255 / 80%);
+  text-shadow: rgb(51 206 255) 0px 0px 1ex, rgb(255 255 255 / 80%) 0px 0px 2px;
+  border-width: 2px;
+  border-style: inherit;
+  border-color: #47334f;
+}
+
+/* Lose Window (if the player lose) */
+
+.lose-screen {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  width: auto;
+  padding: 4rem;
+  margin: 40px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: rgb(0 0 0);
+  background-image: radial-gradient(rgb(18 27 40 / 91%), rgb(2, 9, 3)),
+    url(https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif);
+  background-size: contain;
+  font-family: Inconsolata, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgb(255 255 255 / 80%);
+  text-shadow: rgb(51 206 255) 0px 0px 1ex, rgb(255 255 255 / 80%) 0px 0px 2px;
+  border-width: 2px;
+  border-style: inherit;
+  border-color: #47334f;
+}
+
+/* ================================================================= */
+/* Footer */
+
+.footer {
+  display: flex;
+  border: 7px #313062;
+  border-radius: 20px;
+  background-color: #313062;
+  margin: 10px auto;
+  padding: 0.5rem;
+  width: 90%;
+  color: aliceblue;
+  border-style: ridge;
+  align-items: center;
+  justify-content: center;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 5px #5b5872;
+  border-radius: 10px;
+  margin: 0px;
+  padding: 15px 20px;
+  width: -webkit-fill-available;
+  border-style: inset;
+  text-align: center;
+  background: #373357;
+  color: azure;
+}
+.nickname {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 4px #403f57;
+  border-radius: 10px;
+  margin: 0px;
+  padding: 10px;
+  width: -webkit-fill-available;
+  border-style: inset;
+  text-align: center;
+  background: #181827;
+}
+
+.live-score {
+  text-align: center;
+}
+.score {
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 4px #4d4b91;
+  border-radius: 10px;
+  margin: 0px;
+  padding: 10px;
+  width: -webkit-fill-available;
+  border-style: inset;
+  text-align: center;
+  background: #282745;
+}
+
+.live-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 6px #504c73;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  width: -webkit-fill-available;
+  border-style: groove;
+  background: #292548;
+}
+
+.ranking {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40%;
+  border: 8px #688ace;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  border-style: outset;
+  text-align: center;
+  background: #5372af;
+}
+
+.scoreboard {
+  background-color: #313062;
+  border-radius: 10px;
+  border: 3px #688ace;
+  display: flex;
+  justify-content:center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #854629;
+  font-variant: all-petite-caps;
+  font-family: inherit;
+  padding: 10px 0px 13px 0px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-style: inset;
+}
+
+.typing {
+  margin: auto;
+}
+
+.typing h1 {
+  letter-spacing: 0.15em;
+  font-size: 30px;
+  color: #ffffff;
+}
+.highScore {
+  padding: 1em 0em;
+  color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 4px #4d4b91;
+  border-radius: 10px;
+  margin: 3px 0px;
+  padding: 10px;
+  width: -webkit-fill-available;
+  border-style: double;
+  text-align: center;
+  background: #282745;
+}
